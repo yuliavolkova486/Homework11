@@ -1,16 +1,16 @@
 import java.time.LocalDate;
 
 public class Main {
-    public static boolean LeapYear(int year) {
+    public static boolean isLeapYear(int year) {
         return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
     }
 
     public static void printLeapYearOrNotLeapYear(int year) {
-        if (LeapYear(year)) {
+        if (isLeapYear(year)) {
             System.out.println(year + " — високосный год");
-            return;
+        } else {
+            System.out.println(year + " — не високосный год");
         }
-        System.out.println(year + " — не високосный год");
     }
 
     public static void printCalculationOfDeliveryTime(int deliveryDistance) {
